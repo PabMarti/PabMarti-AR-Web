@@ -6,12 +6,12 @@ Una aplicación web moderna para visualizar modelos 3D en realidad aumentada, co
 
 ## 🌐 **Ver Proyecto en Vivo**
 
-**[https://pabmarti.github.io/AR-Web](https://pabmarti.github.io/AR-Web)**
+**[https://pabmarti.github.io/PabMarti-AR-Web](https://pabmarti.github.io/PabMarti-AR-Web)**
 
 *¡Explora los modelos 3D en realidad aumentada directamente en tu navegador!*
 
 ### 🚀 Quick Start
-1. **Abre el proyecto**: [https://pabmarti.github.io/AR-Web](https://pabmarti.github.io/AR-Web)
+1. **Abre el proyecto**: [https://pabmarti.github.io/PabMarti-AR-Web](https://pabmarti.github.io/PabMarti-AR-Web)
 2. **Selecciona un modelo** del dropdown
 3. **Interactúa** con el modelo 3D usando tu ratón/touch
 4. **Prueba AR** en tu dispositivo móvil con el botón "Ver en tu espacio"
@@ -228,5 +228,6 @@ Para preguntas o soporte:
 - Contacta a través de las redes sociales del proyecto
 
 ---
+
 
 **¡Disfruta explorando el mundo de la realidad aumentada! 🚀**
