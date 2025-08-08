@@ -1,0 +1,74 @@
+{
+  "name": "AR Web - Visualizador 3D en Realidad Aumentada",
+  "short_name": "AR Web",
+  "description": "Visualiza modelos 3D de Genshin Impact y otros personajes en realidad aumentada",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#764ba2",
+  "orientation": "portrait-primary",
+  "scope": "./",
+  "lang": "es",
+  "categories": ["entertainment", "education", "utilities"],
+  "icons": [
+    {
+      "src": "./assets/images/ar_icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/images/ar_icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./assets/images/ar_icon.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Vista de escritorio de AR Web"
+    },
+    {
+      "src": "./assets/images/ar_icon.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Vista móvil de AR Web"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Furina Model",
+      "short_name": "Furina",
+      "description": "Ver modelo de Furina en AR",
+      "url": "./?model=furina",
+      "icons": [
+        {
+          "src": "./assets/images/ar_icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Robot Model",
+      "short_name": "Robot",
+      "description": "Ver modelo del Robot en AR",
+      "url": "./?model=robot",
+      "icons": [
+        {
+          "src": "./assets/images/ar_icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}

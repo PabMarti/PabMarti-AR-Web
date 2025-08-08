@@ -1,0 +1,46 @@
+{
+  "name": "ar-web",
+  "version": "1.0.0",
+  "description": "Visualizador 3D en Realidad Aumentada para modelos de Genshin Impact y otros personajes 3D",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 8000 -c-1",
+    "dev": "http-server -p 8000 -c-1 -o",
+    "build": "echo 'No build step required for static site'",
+    "deploy": "echo 'Deploy to your preferred hosting service'",
+    "lint": "echo 'No linting configured'",
+    "test": "echo 'No tests configured'"
+  },
+  "keywords": [
+    "ar",
+    "augmented-reality",
+    "3d",
+    "webxr",
+    "model-viewer",
+    "genshin-impact",
+    "webgl",
+    "threejs"
+  ],
+  "author": "AR Web Project",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ar-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/ar-web/issues"
+  },
+  "homepage": "https://yourusername.github.io/ar-web",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

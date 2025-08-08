@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>AR Web - Visualizador 3D en Realidad Aumentada</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Visualiza modelos 3D de Genshin Impact en realidad aumentada. Interactúa con Furina y otros personajes en tu espacio real.">
+    <meta name="keywords" content="realidad aumentada, AR, Genshin Impact, Furina, 3D, model-viewer">
+    <meta name="author" content="AR Web Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#764ba2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="AR Web">
+    <meta property="og:title" content="AR Web - Visualizador 3D en Realidad Aumentada">
+    <meta property="og:description" content="Visualiza modelos 3D de Genshin Impact en realidad aumentada">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="./assets/images/ar_icon.png">
+    <link rel="shortcut icon" type="image/png" href="./assets/images/ar_icon.png">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./assets/images/ar_icon.png">
+    <link type="text/css" href="./css/styles.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <h1>AR Web</h1>
+        <p>Visualizador 3D en Realidad Aumentada</p>
+      </div>
+    </header>
+
+    <!-- Model Selector -->
+    <div class="model-selector">
+      <label for="model-select">Seleccionar Modelo:</label>
+      <select id="model-select">
+        <option value="./assets/models/genshin_impact_-_furina.glb">Furina - Genshin Impact</option>
+        <option value="./assets/models/RobotExpressive.glb">Robot Expresivo</option>
+      </select>
+    </div>
+
+    <!-- Controls Panel -->
+    <div class="controls-panel">
+      <button id="reset-camera" class="control-btn">Resetear Cámara</button>
+      <button id="toggle-animation" class="control-btn">Pausar/Reproducir</button>
+      <button id="fullscreen-btn" class="control-btn">Pantalla Completa</button>
+    </div>
+
+    <!-- Main AR Viewer -->
+    <div class="ar-container">
+             <model-viewer 
+         id="model-viewer"
+         src="./assets/models/genshin_impact_-_furina.glb"  
+        ar 
+        ar-modes="webxr scene-viewer quick-look" 
+        camera-controls 
+        tone-mapping="neutral" 
+        shadow-intensity="1" 
+        autoplay
+        camera-orbit="0deg 75deg 105%"
+        min-camera-orbit="auto auto 50%"
+        max-camera-orbit="auto auto 150%"
+        field-of-view="30deg"
+        exposure="1"
+        environment-image="neutral"
+        loading="eager"
+        reveal="interaction"
+        interaction-prompt="auto"
+        interaction-prompt-style="wiggle"
+        animation-name="Idle"
+        ar-scale="auto"
+        ar-placement="floor"
+        ar-button>
+        
+        <!-- Progress Bar -->
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+        
+        <!-- AR Button -->
+        <button slot="ar-button" id="ar-button">
+          <span class="ar-icon">📱</span>
+          Ver en tu espacio
+        </button>
+        
+                 <!-- AR Prompt -->
+         <div id="ar-prompt">
+           <img src="./assets/images/ar_hand_prompt.png" alt="Instrucciones AR">
+         </div>
+
+        <!-- Loading Message -->
+        <div class="loading-message" slot="progress-bar">
+          <div class="spinner"></div>
+          <p>Cargando modelo 3D...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-message hide" slot="progress-bar">
+          <p>❌ Error al cargar el modelo</p>
+          <button id="retry-btn">Reintentar</button>
+        </div>
+      </model-viewer>
+    </div>
+
+    <!-- Info Panel -->
+    <div class="info-panel">
+      <div class="info-content">
+        <h3>Instrucciones</h3>
+        <ul>
+          <li>👆 Toca y arrastra para rotar el modelo</li>
+          <li>🔍 Pellizca para hacer zoom</li>
+          <li>📱 Usa el botón AR para ver en tu espacio</li>
+          <li>🎮 Mueve tu dispositivo para explorar</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2024 AR Web Project - Realidad Aumentada Interactiva</p>
+    </footer>
+
+         <script src="./js/script.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  </body>
+</html>
